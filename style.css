@@ -1,0 +1,84 @@
+/* <label class="input-group">
+        <input type="text" class="email-input">
+        <span class="placeholder"></span>
+    </label> */
+*, *::before, *::after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    font-size: 10px;
+}
+body{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Courier', sans-serif;
+}
+.error-message{
+    position: absolute;
+    bottom: 2%;
+    left: 2%;
+    background-color: rgb(255, 139, 139);
+    padding: 1.4rem 2rem;
+    border-radius: 6px;
+}
+.input-group{
+    position: relative;
+    padding-top: 20px;
+    font-family: 'Courier', sans-serif;
+    margin-bottom: .8rem;
+}
+input{
+    border: none;
+    background: #f2f2f2;
+    padding: 12px;
+    outline: none;
+    border-radius: 6px;
+    font-size: 14px;
+    width: 25rem;
+    /* margin-bottom: .8rem; */
+}
+.placeholder{
+    position: absolute;
+    font-size: 1.2rem;
+    left: 12px;
+    top: 54%;
+    transition: 
+        top 0.3s ease,
+        color 0.3s ease,
+        font-size 0.3s ease;
+}
+input:focus + .placeholder,
+input:valid + .placeholder{
+    top: 5px;
+    font-size: 1rem;
+    color: #686d74;
+}
+.button{
+    border: 3px solid #1b1c1f;
+    width: 25rem;
+    border-radius: 6px;
+    padding: 1.2rem;
+    margin-top: 2rem;
+    box-shadow: 0px 5px 1px #1b1c1f;
+}
+.button p{
+    color: #1b1c1f;
+    font-size: 12px;
+    text-align: center;
+    font-family: 'Courier', sans-serif;
+    font-weight: 800;
+}
+.button:active{
+    transform: translateY(10%);
+    box-shadow: none;
+}
+.button:hover{
+    cursor: pointer;
+}
